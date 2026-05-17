@@ -1,0 +1,20 @@
+# Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# uploads temporales
+storage/
