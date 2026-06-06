@@ -1,0 +1,44 @@
+<nav>
+
+	<div>
+		<img src="images/logoBlanco.png" alt="Proper House Barber" class="navbar-logo">
+	</div>
+
+	<div>
+		<button (click)="handleLinkClick('Servicios')">
+			Servicios
+		</button>
+
+		<button (click)="handleLinkClick('Productos')">
+			Productos
+		</button>
+
+		<button (click)="handleLinkClick('Comunidad')">
+			Comunidad
+		</button>
+
+		<button (click)="handleLinkClick('Staff')">
+			Staff
+		</button>
+
+		<button (click)="handleLinkClick('Contacto')">
+			Contacto
+		</button>
+
+	</div>
+
+	<div class="navbar-actions">
+		<button class="booking-button" (click)="handleBookingClick()">
+			Reservar Turno
+		</button>
+
+		<button class="icon-button">
+			<i class="bi bi-person"></i>
+		</button>
+
+		<button class="icon-button" (click)="handleCartClick()">
+			<i class="bi bi-cart"></i>
+		</button>
+	</div>
+
+</nav>
