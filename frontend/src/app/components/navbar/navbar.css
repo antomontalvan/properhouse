@@ -1,0 +1,50 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 20px 40px;
+	background-color: #0D0B0A;
+}
+
+nav div {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.navbar-logo {
+	height: 50px;
+}
+
+button {
+	background: transparent;
+	border: none;
+
+	color: white;
+
+	font-size: 16px;
+	cursor: pointer;
+
+	transition: 0.3s;
+}
+
+button:hover {
+	color: #C9943A;
+}
+
+.booking-button {
+	border: 2px solid white;
+	padding: 12px 24px;
+	border-radius: 4px;
+}
+
+.icon-button {
+	color: white;
+	font-size: 24px;
+	padding: 8px;
+}
+
+.icon-button:hover {
+	color: #C9943A;
+}
