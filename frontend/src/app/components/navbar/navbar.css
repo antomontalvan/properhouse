@@ -1,10 +1,25 @@
 nav {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
 	align-items: center;
 
 	padding: 20px 40px;
-	background-color: var(--color-background);
+
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.75),
+		rgba(0, 0, 0, 0)
+	);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	box-sizing: border-box;
+
+	z-index: 1000;
 }
 
 nav div {
@@ -13,8 +28,12 @@ nav div {
 	gap: 15px;
 }
 
+.navbar-actions {
+	justify-content: flex-end;
+}
+
 .navbar-logo {
-	height: 50px;
+	height: 65px;
 }
 
 button {
