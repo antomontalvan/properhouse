@@ -4,7 +4,7 @@ nav {
 	align-items: center;
 
 	padding: 20px 40px;
-	background-color: #0D0B0A;
+	background-color: var(--color-background);
 }
 
 nav div {
@@ -21,30 +21,30 @@ button {
 	background: transparent;
 	border: none;
 
-	color: white;
+	color: var(--color-white);
 
 	font-size: 16px;
 	cursor: pointer;
 
-	transition: 0.3s;
+	transition: var(--transition-fast);
 }
 
 button:hover {
-	color: #C9943A;
+	color: var(--color-accent);
 }
 
 .booking-button {
-	border: 2px solid white;
+	border: 2px solid var(--color-white);
 	padding: 12px 24px;
 	border-radius: 4px;
 }
 
 .icon-button {
-	color: white;
+	color: var(--color-white);
 	font-size: 24px;
 	padding: 8px;
 }
 
 .icon-button:hover {
-	color: #C9943A;
+	color: var(--color-accent);
 }

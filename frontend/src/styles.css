@@ -1,1 +1,31 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-background: #0d0b0a;
+  --color-surface: #161311;
+  --color-accent: #c9943a;
+  --color-text: #f5f0e8;
+  --color-muted: #a9a29a;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --navbar-height: 90px;
+  --container-width: 1400px;
+
+  --border-radius: 4px;
+
+  --transition-fast: 0.3s;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+	margin: 0;
+
+	font-family: var(--font-body);
+
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
