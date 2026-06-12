@@ -1,0 +1,127 @@
+<nav class="navbar">
+
+  <!-- Logo -->
+  <button
+    class="logo-button"
+    (click)="navigate('shop')">
+    PROPER<span>HOUSE</span>
+  </button>
+
+  <!-- Desktop Menu -->
+  <div class="nav-links">
+
+    <button
+      *ngFor="let link of navLinks"
+      (click)="navigate(link.page)"
+      [class.active]="currentPage === link.page">
+
+      {{ link.label }}
+
+    </button>
+
+  </div>
+
+  <!-- Right Side -->
+  <div class="navbar-actions">
+
+    <!-- User -->
+    <div class="user-menu">
+
+      <button
+        class="icon-button"
+        (click)="toggleUserMenu()">
+
+        <i class="bi bi-person"></i>
+
+      </button>
+
+      <div
+        class="dropdown"
+        *ngIf="userMenuOpen">
+
+        <div class="dropdown-header">
+
+          {{ isLoggedIn ? 'MI CUENTA' : 'ACCEDER' }}
+
+        </div>
+
+        <div *ngIf="!isLoggedIn">
+
+          <button (click)="login()">
+            Iniciar sesión
+          </button>
+
+          <button>
+            Volver a la barber
+          </button>
+
+        </div>
+
+        <div *ngIf="isLoggedIn">
+
+          <button>
+            Ir a la comunidad
+          </button>
+
+          <button>
+            Volver a la barber
+          </button>
+
+          <button
+            class="logout"
+            (click)="logout()">
+
+            Cerrar sesión
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Cart -->
+    <button
+      class="icon-button"
+      (click)="openCart()">
+
+      <i class="bi bi-bag"></i>
+
+      <span class="cart-badge">
+        0
+      </span>
+
+    </button>
+
+    <!-- Mobile -->
+    <!-- <button
+      class="icon-button"
+      (click)="toggleMenu()">
+
+      <i
+        class="bi"
+        [ngClass]="menuOpen ? 'bi-x-lg' : 'bi-list'">
+      </i>
+
+    </button> -->
+
+  </div>
+
+</nav>
+
+<!-- Mobile Menu -->
+
+<div
+  class="mobile-menu"
+  *ngIf="menuOpen">
+
+  <button
+    *ngFor="let link of navLinks"
+    (click)="navigate(link.page)">
+
+    {{ link.label }}
+
+  </button>
+
+</div>
