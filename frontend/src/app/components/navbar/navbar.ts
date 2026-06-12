@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 
 export class Navbar {
+
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.isScrolled = window.scrollY > 100;
+  }
+
   activeLink: string | null = null;
 
   navLinks: string[] = ['Servicios', 'Productos', 'Comunidad', 'Staff', 'Contacto'];
