@@ -1,7 +1,18 @@
-<nav>
+<nav [class.scrolled]="isScrolled"> 
+<!-- cuando isScrolled es false = <nav>. Cuando isScrolled es true = <nav class="scrolled">-->
 
-	<div>
-		<img src="images/logoBlanco.png" alt="Proper House Barber" class="navbar-logo">
+	<div class="navbar-logo-wrapper"> 
+		<img 
+			src="images/logoNombreBlanco.png"
+			alt="Proper House Barber" 
+			class="navbar-logo navbar-logo-full"
+		>
+
+		<img 
+			src="images/logoBlanco.png"
+			alt="Proper House Barber"
+			class="navbar-logo navbar-logo-icon"
+		>
 	</div>
 
 	<div>
