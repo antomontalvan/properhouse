@@ -1,0 +1,48 @@
+<div class="product-card">
+
+  <div class="product-image">
+    <img [src]="image" [alt]="name">
+  </div>
+
+  <div class="product-info">
+
+    <p class="product-category">
+      {{ category }}
+    </p>
+
+    <h3 class="product-name">
+      {{ name }}
+    </h3>
+
+    <div class="product-footer">
+
+      <span class="product-price">
+        ${{ price }}
+      </span>
+
+      <button class="add-button">
+        <svg
+          class="bag-icon"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none">
+
+          <path
+            d="M6 8H18L17 20H7L6 8Z"
+            stroke="currentColor"
+            stroke-width="2"/>
+
+          <path
+            d="M9 8V6A3 3 0 0 1 15 6V8"
+            stroke="currentColor"
+            stroke-width="2"/>
+        </svg>
+        AGREGAR
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

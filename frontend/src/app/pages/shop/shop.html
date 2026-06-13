@@ -1,5 +1,6 @@
-<app-navbar-shop></app-navbar-shop>
+<app-navbar-shop></app-navbar-shop> <!-- Navbar -->
 
+<!-- Seccion Hero -->
 <section class="shop-hero">
   
   <div class= "hero-overlay"></div>  
@@ -19,6 +20,24 @@
     </p>
   </div>
 </section>
+
+<!-- Mini Navbar de Categorias de Productos. -->
+<app-category-filter
+  (categoryChanged)="onCategoryChange($event)">
+</app-category-filter>
+
+<!-- Grid de productos -->
+<app-products-grid
+  [products] = "filteredProducts"
+></app-products-grid>
+
+<!-- Probando un producto -->
+<!-- <app-product-card
+  image="images/prod_grooming/pomada.jpeg"
+  category="GROOMING"
+  name="Pomada Texturizante"
+  price="$3.800">
+</app-product-card> -->
 
 <!-- 
 <main class="shop-page">
