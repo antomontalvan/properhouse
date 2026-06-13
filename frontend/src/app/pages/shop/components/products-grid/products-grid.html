@@ -1,0 +1,12 @@
+<div class="products-grid">
+
+  @for (product of products; track product.id){
+    <app-product-card
+      [image]= "product.image"
+      [category]="product.category"
+      [name]="product.name"
+      [price]="product.price">
+    </app-product-card>
+  }
+
+</div>
