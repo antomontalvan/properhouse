@@ -36,7 +36,8 @@
 }
 
 body {
+  margin: 0;
+  font-family: var(--font-body);
   background-color: var(--brand-bg);
   color: var(--brand-cream);
-  font-family: var(--font-body);
 }
