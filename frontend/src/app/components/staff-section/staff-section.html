@@ -1,0 +1,39 @@
+<section id="staff" class="staff-section">
+	<div class="staff-container">
+		<div class="staff-header">
+			<h2>STAFF</h2>
+
+			<div class="carousel-controls">
+				<button
+					class="arrow-button"
+					type="button"
+					aria-label="Ver staff anterior"
+					[disabled]="!canScrollLeft"
+					(click)="scrollStaff('left')">
+					<i class="bi bi-chevron-left"></i>
+				</button>
+
+				<button
+					class="arrow-button"
+					type="button"
+					aria-label="Ver más staff"
+					[disabled]="!canScrollRight"
+					(click)="scrollStaff('right')">
+					<i class="bi bi-chevron-right"></i>
+				</button>
+			</div>
+		</div>
+
+		<div #carousel class="staff-carousel" (scroll)="updateArrows()">
+			@for (member of staff; track member.name) {
+				<div class="staff-card-wrapper">
+					<app-staff-card
+						[name]="member.name"
+						[username]="member.username"
+						[imageUrl]="member.imageUrl">
+					</app-staff-card>
+				</div>
+			}
+		</div>
+	</div>
+</section>

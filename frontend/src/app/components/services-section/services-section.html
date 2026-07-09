@@ -1,0 +1,42 @@
+<section id="servicios" class="services-section">
+	<div class="services-container">
+		<p class="section-label">LO QUE HACEMOS</p>
+
+		<div class="services-header">
+			<h2>SERVICIOS</h2>
+
+			<div class="carousel-controls">
+				<button
+					class="arrow-button"
+					type="button"
+					aria-label="Ver servicios anteriores"
+					[disabled]="!canScrollLeft"
+					(click)="scrollServices('left')">
+					<i class="bi bi-chevron-left"></i>
+				</button>
+
+				<button
+					class="arrow-button"
+					type="button"
+					aria-label="Ver más servicios"
+					[disabled]="!canScrollRight"
+					(click)="scrollServices('right')">
+					<i class="bi bi-chevron-right"></i>
+				</button>
+			</div>
+		</div>
+
+		<div #carousel class="services-carousel" (scroll)="updateArrows()">
+			@for (service of services; track service.title) {
+				<div class="service-card-wrapper">
+					<app-service-card
+						[title]="service.title"
+						[price]="service.price"
+						[description]="service.description"
+						[imageUrl]="service.imageUrl">
+					</app-service-card>
+				</div>
+			}
+		</div>
+	</div>
+</section>
